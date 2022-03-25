@@ -15,9 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
             gridDisplay.appendChild(square)
             squares.push(square)
         }
+        generate()
     }
 
     createBoard()
+
+    // TODO: generate a number randomly
+
+    // generate the number 2 randomly
+    function generate() {
+        let randomNumber = Math.floor(Math.random() * squares.length)
+        if (squares[randomNumber].innerHTML == 0) {
+            squares[randomNumber].innerHTML = 2
+        } else generate()
+    }
+
+
+
+
+
+
+
+
+
+
 
 })
 
